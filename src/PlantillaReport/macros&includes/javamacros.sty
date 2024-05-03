@@ -1,0 +1,68 @@
+% javamacros.sty
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{javamacros}[2024/05/01 Java code macros]
+
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage{verbatim}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{javapurple}{rgb}{0.25,0.35,0.75}
+
+
+
+
+\lstdefinestyle{mystyle}{
+    basicstyle=\small\ttfamily\fontfamily{zi4}\selectfont, % Cambio de la fuente a Inconsolata
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    breaklines=true,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{codegray},
+    frame=trbl,
+    framerule=2pt,
+    framexleftmargin=5mm,
+    backgroundcolor=\color{gray!5},
+    captionpos=b,   
+    breakatwhitespace=false,         
+    keepspaces=true,                 
+    showspaces=false,                
+    showtabs=false,                  
+    tabsize=2,
+    framexleftmargin=15pt, % Espacio a la izquierda del recuadro
+    framexrightmargin=5pt, % Espacio a la derecha del recuadro
+    xleftmargin=15pt, % Espacio a la izquierda del recuadro
+    xrightmargin=15pt, % Espacio a la derecha del recuadro
+    aboveskip=10pt, % Espacio arriba del código
+    belowskip=10pt, % Espacio abajo del código
+    abovecaptionskip=5pt, % Espacio en el borde superior
+    belowcaptionskip=5pt, % Espacio en el borde inferior
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}, % Flecha al final de la línea
+}
+
+\lstdefinelanguage{Java}{
+    keywords={abstract,assert,break,case,catch,class,const,continue,default,do,double,else,enum,extends,final,finally,float,for,goto,if,implements,import,instanceof,int,interface,lambda,long,native,new,package,private,protected,public,return,short,static,strictfp,super,switch,synchronized,this,throw,throws,transient,try,void,volatile,while,true,false,null},
+    keywordstyle=\color{javapurple},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[s]{'}{'},
+    emph={String,Integer,Boolean,Long,Double,Void},
+    emphstyle=\color{orange},
+    % Define caca como palabra clave y establece su estilo de color
+}
+
+\lstnewenvironment{javacode}[1][]
+{
+    \lstset{style=mystyle, language=Java, #1}
+}
+{
+}
+
+\endinput
