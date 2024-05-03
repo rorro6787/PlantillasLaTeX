@@ -4,9 +4,21 @@ Este repositorio contiene plantillas LaTeX de varios tipos, incluyendo informes,
 
 ## Estructura del Repositorio
 
-- **src:** dentro de él encontrarás una carpeta por cada una de las plantillas que vaya incluyendo.
+- **src:** dentro de él encontrarás una carpeta por cada una de las plantillas que vaya incluyendo. Cada carpeta contiene un archivo principal main.tex que puedes compilar y personalizar según tus necesidades.
 
-Cada carpeta contiene un archivo principal main.tex que puedes compilar y personalizar según tus necesidades.
+
+
+## Ejemplo 
+
+En cada una de las carpetas, puedes encontrar el código fuente de cada una de mis plantillas. Si las compilas en algún entorno de trabajo de LaTeX, puedes encontrarte plantillas base con una apariencia como esta:
+
+<br> <!-- Salto de línea -->
+
+<p align="center">
+   <img src="https://github.com/rorro6787/rorro6787/blob/main/Images/si.png" width="800" height="700" />
+</p>
+
+<br>
 
 ## Uso
 
@@ -28,4 +40,5 @@ Estas plantillas están disponibles bajo la licencia MIT. Siéntete libre de usa
 Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo.
 
 ¡Espero que estas plantillas sean útiles para tus proyectos LaTeX!
+
 
